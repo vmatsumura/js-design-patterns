@@ -339,19 +339,20 @@ Agora em qualquer componente dentro da aplicação consegue pegar a cor do tema 
 
 ```javascript
 class App extends React.Component {
-  render() {
+  render () {
     return (
       <div>
         <Paragraph>
-          That's how you would use children in React
+          Hello React Provider Design Pattern
         </Paragraph>
       </div>
     )
   }
 }
+
 class Paragraph extends React.Component {
-  render() {
-    const { coloredTheme } = this.context;
+  render () {
+    const { coloredTheme } = this.context
     return (
       <p style={{ color: coloredTheme }}>
         {this.props.children}
@@ -359,9 +360,11 @@ class Paragraph extends React.Component {
     )
   }
 }
+
 Paragraph.contextTypes = {
   coloredTheme: PropTypes.string
 }
+
 ```
 
 ## Conclusão
