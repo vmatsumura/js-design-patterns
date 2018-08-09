@@ -2,9 +2,9 @@
 
 Todo desenvolvedor deveria se esforçar para escrever um código sustentável, legível, organizado, perfomático e reutilizável. A estruturação do código se torna mais importante à medida que as aplicações se tornam maiores. 
 
-Os padrões de projeto (Design Patterns) são cruciais para solucionar esse desafio, fornecendo uma estrutura padronizada e organizada para que se tenha um entendimento mais rápido para resolução de problemas.
+Os padrões de projeto (Design Patterns) são cruciais para solucionar esse desafio, fornecendo uma estrutura padronizada e organizada para que se tenha um entendimento mais rápido na resolução de problemas.
 
-Muita das vezes acabamos utilizando mais de um padrão de projeto dependendo do tamanho e complexidade do projeto. Para sermos mais assertivos na escolha do uso de um ou mais padrões de projetos temos que entender:
+Muita das vezes acabamos utilizando mais de um padrão de projeto, dependendo do tamanho e complexidade do projeto. Para sermos mais assertivos na escolha do uso de um ou mais padrões de projetos temos que entender:
 * O que queremos resolver?
 * Como resolvemos com esse padrão?
 * Como e onde implementamos?
@@ -14,6 +14,7 @@ Para respondermos essas perguntas, vamos conhecer alguns padrões de projeto Jav
 * [Module Design Pattern](#module-design-pattern)
 * [Prototype Design Pattern](#prototype-design-pattern)
 * [Observer Design Pattern](#observer-design-pattern)
+* [Pub/Sub Desing Pattern](#pub-sub-design-pattern)
 * [Singleton Design Pattern](#singleton-design-pattern)
 * [Provider Design Pattern](#provider-design-pattern)
 
@@ -21,7 +22,7 @@ Para respondermos essas perguntas, vamos conhecer alguns padrões de projeto Jav
 
 Este padrão de projeto é um dos mais utilizados pelos desenvolvedores. Com este padrão podemos manter códigos indenpendentes de outros componentes.
 
-Para quem esta familiarizado com linguagem OO, o módulo é como se fosse uma classe do Javascript. A vantagem tirada disso é o encapsulamento que protege propriedades e funções de outros módulos.
+Para quem esta familiarizado com linguagem OO, o módulo é uma forma de criar uma classe encapsulada no Javascript. A vantagem tirada disso é o encapsulamento que protege propriedades e funções de outros módulos.
 
 Mas para que o escopo privado funcione, é necessário a invocação imediata de uma função que envolve o módule, também conhecida como IIFE (Immediately-Invoked-Function-Expressions).
 
@@ -102,7 +103,7 @@ Celta.go() // Output: Push acelerate pedal
 
 ### Revealing Prototype Design Pattern
 
-O padrão de Prototype também tem uma variação. Ela é utilizada para encapsular para deixar propriedades/funções públicas ou privadas
+O padrão de Prototype também tem uma variação. Ela é utilizada para encapsular, deixar propriedades/funções públicas ou privadas
 
 ```javascript
 const Car = function () {
