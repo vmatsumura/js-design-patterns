@@ -76,6 +76,67 @@ RevealingModuleClass.privateMethod() // undefined
 ```
 
 ## Prototype Design Pattern
+O Prototype Design Pattern se baseia na herança prototípica do Javascript. 
+
+É criado inicialmente um objeto original, com suas propriedades para que se possar fazer clones deste objetos e reutilizar as propriedades. 
+
+Este padrão de projeto também pode ser utilizado para tarefas de alta performance replicando também uma funcionalidade. Assim você consegue criar quantos clones precisar para fazer tarefas em paralelo.
+
+```javascript
+\\ Objeto original
+const Car = function () {
+  this.wheels = 4
+}
+
+Car.prototype.go = function () {
+  console.log('Push acelerate pedal')
+}
+
+const Celta = new Car()
+Celta.wheels // 4
+Celta.go() // Output: Push acelerate pedal
+
+```
+
+### Revealing Prototype Design Pattern
+
+O padrão de Prototype também tem uma variação. Ela é utilizada para encapsular, podendo deixar propriedades/funções públicas ou privadas
+
+```javascript
+const Car = function () {
+  this.wheels = 4
+}
+
+Car.prototype = function () {
+
+  const output = function (status) {
+    console.log('The car is: ' + status)
+  }
+  
+  const go = function () {
+    output('running')
+  }
+  
+  const stop = function () {
+    output('stopped')
+  }
+  
+  return {
+    go,
+    status,
+    stop
+  }
+  
+}()
+
+const Celta = new Car()
+Celta.wheels // 4
+Celta.go() // Output: The car is: running
+Celta.stop() // Output: The car is: stopped
+Celta.output() // undefined
+
+```
+
 
 ## Observer Design Pattern
 
