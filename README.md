@@ -78,6 +78,7 @@ RevealingModuleClass.increment() // Output: inside private method
 RevealingModuleClass.counter // undefined
 RevealingModuleClass.privateMethod() // undefined
 ```
+⇡ [Back to Top](#javascript-design-patterns) ⇡
 
 ## Prototype Design Pattern
 O Prototype Design Pattern se baseia na herança prototípica do Javascript. 
@@ -138,7 +139,7 @@ Celta.stop() // Output: The car is: stopped
 Celta.output() // undefined
 
 ```
-
+⇡ [Back to Top](#javascript-design-patterns) ⇡
 
 ## Observer Design Pattern
 
@@ -199,6 +200,8 @@ observer.unsubscribe(action2)
 observer.notify('Bye Action 02')
 
 ```
+⇡ [Back to Top](#javascript-design-patterns) ⇡
+
 ## Pub/Sub Design Pattern
 O Pub/Sub é muito semelhante ao Observer, mas existe pequenas diferenças entre eles. Uma delas é que existe um orquestrador de "subscribers" pois eles são gerenciados como tópicos, ou seja, vocês pode querer afetar apenas uma série de elementos.
 
@@ -253,6 +256,8 @@ var pubsub = {}
 ```
 Depois de criado você pode criar ínumeros "subscribers" com o mesmo tópico ou não, e fazer a publicação quando precisar
 
+⇡ [Back to Top](#javascript-design-patterns) ⇡
+
 ## Singleton Design Pattern
 
 A idéia de padrão é fazer com que utilizemos apenas uma instâcia de um objeto para executar suas funções. Para mostrar isso no código, imagine que vários desenvolvedores precisam utilizar a mesma instância de um objeto para executar um console.log
@@ -294,6 +299,7 @@ Printer2.print('Kuwai', 'Olá Vitinho!')
 
 console.log('Printer1 tem a mesma instância de Printer2? ' + Printer1 === Printer2)
 ```
+⇡ [Back to Top](#javascript-design-patterns) ⇡
 
 ## Provider Design Pattern
 
@@ -366,6 +372,7 @@ Paragraph.contextTypes = {
 }
 
 ```
+⇡ [Back to Top](#javascript-design-patterns) ⇡
 
 ## Conclusão
 
@@ -376,3 +383,5 @@ Acabaremos usando um ou mais padrões de projetos para conquistarmos um código 
 Mas para isso precisamos ter em mente todas essas ferramentas em mãos para decidir nos momentos certos a utilização de cada uma delas e aproveitando o que elas tem de bom à oferecer. 
 
 Espero ter ajudado um pouco com o esse resumo de alguns padrões de projetos Javascript.
+
+⇡ [Back to Top](#javascript-design-patterns) ⇡
