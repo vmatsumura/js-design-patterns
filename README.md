@@ -14,7 +14,7 @@ Para respondermos essas perguntas, vamos conhecer alguns padrões de projeto Jav
 * [Module Design Pattern](#module-design-pattern)
 * [Prototype Design Pattern](#prototype-design-pattern)
 * [Observer Design Pattern](#observer-design-pattern)
-* [Pub/Sub Desing Pattern](#pub-sub-design-pattern)
+* [Pub/Sub Desing Pattern](#pubsub-design-pattern)
 * [Singleton Design Pattern](#singleton-design-pattern)
 * [Provider Design Pattern](#provider-design-pattern)
 
