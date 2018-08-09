@@ -122,7 +122,6 @@ Car.prototype = function () {
   
   return {
     go,
-    status,
     stop
   }
   
