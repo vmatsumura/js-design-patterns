@@ -51,20 +51,24 @@ O Module Design Pattern tem uma variação para que possamos revelar alguma vari
 
 ```javascript
 const RevealingModuleClass = (function() {
-  // declaração privada de variaveis e/ou funções
-  const counter = 8
+  let counter = 8
   
-  const privateMethod = () => {
+  const privateMethod = function () {
     counter++
     console.log('inside private method')
   }
   
-  const exposedMethod = () => {
+  const exposedMethod = function () {
     privateMethod()
   }
-  
+
+  const getCounter = function () {
+	  console.log(counter)
+  }
+
   return {
-    // declaração pública de variaveis e/ou funções
+    counter,
+    getCounter,
     increment: exposedMethod
   }
 })()
