@@ -11,10 +11,20 @@ Muita das vezes acabamos utilizando mais de um padrão de projeto dependendo do 
 
 Para respondermos essas perguntas, vamos conhecer alguns padrões de projeto Javascript:
 
-* Module Design Pattern
-* Prototype Design Pattern
-* Observer Design Pattern
-* Singleton Design Pattern
-* Provider Design Pattern
+* [Module Design Pattern](#ModuleDesignPattern)
+* [Prototype Design Pattern](#PrototypeDesignPattern)
+* [Observer Design Pattern](#ObserverDesignPattern)
+* [Singleton Design Pattern](#SingletonDesignPattern)
+* [Provider Design Pattern](#ProviderDesignPattern)
 
+## Module Design Pattern
 
+## Prototype Design Pattern
+
+## Observer Design Pattern
+
+## Singleton Design Pattern
+
+## Provider Design Pattern
+
+## Conclusão
