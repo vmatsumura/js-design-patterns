@@ -31,8 +31,7 @@ const ModuleClass = (function() {
   const text = 'Olá Module Design Pattern'
   
   const changeText = () => {
-    const element = document.getElementById('hello-world')
-    element.innerHTML = text
+    console.log('Trocando o texto de um elemento')
   }
   
   return {
@@ -43,7 +42,7 @@ const ModuleClass = (function() {
   }
 })()
 
-ModuleClass.publicChangeText() // Vai conseguir executar o método changeText
+ModuleClass.publicChangeText() // Output: Trocando o texto de um elemento
 ModuleClass.text // undefined
 ModuleClass.changeText() // undefined
 ```
