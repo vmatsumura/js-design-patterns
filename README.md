@@ -141,6 +141,64 @@ Celta.output() // undefined
 
 ## Observer Design Pattern
 
+Imagine que você precise executar ações simultaneas dada a mudança de um valor. Com este padrão de projeto podemos fazer isso.
+
+Para isso precisaremos criar uma classe observadora, onde persistiremos uma lista de ações (observers) que desejamos executar.
+
+Então teremos que criar uma forma de incrementar essa lista fazendo um "subscribe" ou remover uma ação da lista com "unsubscribe".
+
+Com os "observers" criados, podemos fazer um "notify" quando tivermos um novo valor para fazer as ações simultaneamente.
+
+```javascript
+class Observable {
+  // cada instância da classe Observer
+  // começa com um array vazio de observadores/observers
+  // que reagem a uma mudança de estado
+  constructor() {
+    this.observers = [];
+  }
+
+  // adicione a capacidade de inscrever uma nova ação
+  // essencialmente, adicione algo ao array de observadores
+  subscribe(f) {
+    this.observers.push(f);
+  }
+
+  // adicione a capacidade de cancelar a inscrição de uma ação em particular
+  // essencilamente, remove algum item do array de observadores
+  unsubscribe(f) {
+    this.observers = this.observers.filter(subscriber => subscriber !== f);
+  }
+
+  // atualiza todas as ações inscritas
+  // e passa alguns dados para cada um deles
+  notify(data) {
+    this.observers.forEach(observer => observer(data));
+  }
+}
+```
+
+Criada uma classe podemos criar um Observer e utilizar para nosso objetivo
+
+```javascript
+const observer = new Observable()
+
+const action1 = data => console.log('Ação 01: ' + data)
+const action2 = data => console.log('Ação 02: ' + data)
+const action3 = data => console.log('Ação 03: ' + data)
+
+observer.subscribe(action1)
+observer.subscribe(action2)
+observer.subscribe(action3)
+
+observer.notify('Hello Observer Design Pattern!')
+
+observer.unsubscribe(action2)
+
+observer.notify('Bye Action 02')
+
+```
+
 ## Singleton Design Pattern
 
 ## Provider Design Pattern
